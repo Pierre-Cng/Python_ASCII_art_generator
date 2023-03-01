@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>This is a test</h1>
+    <header>
+        <h1>Welcome to ASCII art generator</h1>
+    </header>
+
+    <div class="content">
+        <div class="uploader">
+            <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+            <strong>OR</strong>
+            <span class="dragBox" >
+                Darg and Drop image here
+                <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+            </span>
+        </div>
+        <div id="preview"></div>
+
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+
+    </div>
+    <script src="dragndrop.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
